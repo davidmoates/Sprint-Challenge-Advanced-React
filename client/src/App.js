@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import USWNTCards from "./components/USWNTCards";
 import "./App.css";
@@ -12,6 +13,14 @@ const DivFlex = styled.div`
 `;
 
 class App extends React.Component {
+=======
+import React from 'react';
+
+import './App.css';
+
+class App extends React.Component {
+
+>>>>>>> 7db64df5d5e4e0b33904c5190ff1b0b588e12d0d
   constructor() {
     super();
     this.state = {
@@ -21,6 +30,7 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("http://localhost:5000/api/players")
+<<<<<<< HEAD
       .then(res => res.json())
       .then(players => {
         console.log("fetch: players: ", players);
@@ -46,6 +56,34 @@ class App extends React.Component {
       </DivFlex>
     );
   }
+=======
+    .then(res => res.json())
+    .then(players => {
+      console.log("fetch: players: ", players);
+      this.setState({ ...this.state, dataUSWNT: players.message });
+    })
+    .catch(err => console.log("error on fetch: ", err));
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+>>>>>>> 7db64df5d5e4e0b33904c5190ff1b0b588e12d0d
 }
 
 export default App;
