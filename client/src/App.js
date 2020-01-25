@@ -1,7 +1,12 @@
 import React from "react";
-import USWNTCards from "./components/USWNTCards";
-import "./App.css";
 import styled from "styled-components";
+
+import USWNTCards from "./components/USWNTCards";
+import Navbar from "./components/Navbar";
+
+import "./App.css";
+import "./styles.scss";
+
 
 const DivFlex = styled.div`
   display: flex;
@@ -33,6 +38,7 @@ class App extends React.Component {
     console.log("info about state ", this.state.dataUSWNT);
     return (
       <DivFlex className="App">
+        <Navbar />
         {this.state.dataUSWNT &&
           this.state.dataUSWNT.map(players => {
             return (
