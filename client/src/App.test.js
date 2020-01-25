@@ -18,7 +18,13 @@ test('rtl renders without crashing', () => {
 });
 
 test("navbar div class", () => {
-  const { getByTestClass } = render(<App />);
+  const { getByTestClass } = render(<Navbar />);
 
   getByTestClass("navbar");
+});
+
+test("App div class", () => {
+  const { getByTestClass } = render(<App />);
+
+  getByTestClass("App");
 });
